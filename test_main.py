@@ -76,7 +76,6 @@ def test_make_smoothie_prints_added_ingredients_version_2(tmp_path):
 
 def test_make_smoothie_prints_a_joke(tmp_path, monkeypatch):
     # Given: a recipe file and a joke
-    assert False
     recipe_file = tmp_path / "my_smoothie.txt"
     recipe_file.write_text("Mango\n")
     monkeypatch.setattr(

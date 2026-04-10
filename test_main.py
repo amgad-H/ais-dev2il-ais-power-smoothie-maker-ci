@@ -78,13 +78,8 @@ def test_make_smoothie_prints_a_joke(tmp_path, monkeypatch):
     # Given: a recipe file and a joke
     recipe_file = tmp_path / "my_smoothie.txt"
     recipe_file.write_text("Mango\n")
-    monkeypatch.setattr(
-        pyjokes,
-        "get_joke",
-        lambda: (
-            "A mock walks into a bar. The bartender asks, 'What can I get you?' The mock returns None."
-        ),
-    )
+    monkeypatch.setattr(pyjokes, "get_joke",
+                        lambda: "A mock walks into a bar. The bartender asks, 'What can I get you?' The mock returns None.")
     monkeypatch.setattr(time, "sleep", lambda x: None)
     console = Console(record=True)
 

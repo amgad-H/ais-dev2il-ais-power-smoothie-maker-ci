@@ -6,7 +6,6 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 
 
 def get_ingredients(recipe_file: Path) -> list[str]:
-    #my_secret = "hyddYR1i2srLYdKa"
     if not recipe_file.exists():
         return []
     with open(recipe_file, "r") as f:
